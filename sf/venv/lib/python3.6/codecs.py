@@ -1,0 +1,5 @@
+XSym
+0096
+499b8e529a8d1945a08b60bbe421e942
+/usr/local/Cellar/python3/3.6.4/Frameworks/Python.framework/Versions/3.6/lib/python3.6/codecs.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

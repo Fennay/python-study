@@ -1,0 +1,5 @@
+XSym
+0103
+8e5a5e01934ddac5db9b68dc6c1dea42
+/usr/local/Cellar/python3/3.6.4/Frameworks/Python.framework/Versions/3.6/lib/python3.6/sre_constants.py
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
