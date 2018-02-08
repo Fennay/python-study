@@ -22,13 +22,15 @@ def get_ip():
 
 
 def download(url):
-    # print(url)
+    print(url)
     headers = {
-        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'}
-    ip = get_ip()
-    ip = ip[0][0] + ':' + ip[0][1]
+        'User-Agent': 'Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/59.0.3071.115 Safari/537.36'
+    }
+    # ip = get_ip()
+    # ip = ip[0][0] + ':' + ip[0][1]
+    ip = '61.135.217.7:80'
     proxies = {"http": "http://" + ip, "https": "http://" + ip, }
-    response = requests.get(url, headers=headers)
+    response = requests.get(url, headers=headers,proxies=proxies)
     return response.text
 
 
@@ -40,13 +42,13 @@ def get_content_first_page(html, year):
 
     # 获取所有的行
     trs = tables[-1].find_all('tr')
-    row_title = [item.text.strip() for item in trs[0].find_all('th')]
+    row_title = [item.text.strip() for item in trs[1].find_all('th')]
 
     rank_list = []
     rank_list.append(row_title)
     for i, tr in enumerate(trs):
-        # if 0 == i or 1 == i:
-        if 0 == i:
+        # if 0 == i:
+        if 0 == i or 1 == i:
             continue
         tds = tr.find_all('td')
 
@@ -73,7 +75,8 @@ def get_content_other_page(html, year):
     rank_list = []
     # rank_list.append(row_title)
     for i, tr in enumerate(trs):
-        if 0 == i:
+        if 0 == i or 1 == i:
+        # if 0 == i:
             continue
         tds = tr.find_all('td')
 
@@ -104,9 +107,8 @@ def save_date_to_csv_file(data, file_name):
 
 
 def get_forbes_global_year_2007(year=2007):
-    url = 'http://wiki.mbalib.com/wiki/2008%E3%80%8A%E7%A6%8F%E5%B8%83%E6%96%AF%E3%80%8B%E5%85%A8%E7%90%83%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B82000%E5%BC%BA'
+    url = 'http://wiki.mbalib.com/wiki/2007%E3%80%8A%E7%A6%8F%E5%B8%83%E6%96%AF%E3%80%8B%E5%85%A8%E7%90%83%E4%B8%8A%E5%B8%82%E5%85%AC%E5%8F%B82000%E5%BC%BA'
     html = download(url)
-
     data_first_page = get_content_first_page(html, year)
     # 存储入库
     save_date_to_csv_file(data_first_page, base_data_path + 'forbes_' + str(year) + '.csv')
@@ -120,4 +122,4 @@ def get_forbes_global_year_2007(year=2007):
 
 
 if __name__ == '__main__':
-    get_forbes_global_year_2007(2008)
+    get_forbes_global_year_2007(2007)
