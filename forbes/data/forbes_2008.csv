@@ -1,4 +1,4 @@
-Rank,公司名称（英文）,公司名称（中文）,Country/area（国家或地区）,Industry（行业）,Sales （销售额）($bil十亿美元),Profits （利润）($bil),Assets 资产($bil),Market Value 市值($bil)
+年份,Rank,公司名称（英文）,公司名称（中文）,Country/area（国家或地区）,Industry（行业）,Sales （销售额）($bil十亿美元),Profits （利润）($bil),Assets 资产($bil),Market Value 市值($bil)
 2008,1,HSBC Holdings,汇丰集团,United Kingdom,Banking,146.5,19.13,"2,348.98",180.81
 2008,2,General Electric,通用电气公司,United States,Conglomerates,172.74,22.21,795.34,330.93
 2008,3,Bank of America,美国银行,United States,Banking,119.19,14.98,"1,715.75",176.53

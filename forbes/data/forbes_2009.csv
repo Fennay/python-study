@@ -1,4 +1,4 @@
-排名(Rank),公司名称(Company),所在国家或地区(Country),所在行业(Industry),销售收入(Sales) ($bil),利润(Profits),总资产(Assets) ($bil),市值(Market Vaue) ($bil)
+年份,排名(Rank),公司名称(Company),所在国家或地区(Country),所在行业(Industry),销售收入(Sales) ($bil),利润(Profits),总资产(Assets) ($bil),市值(Market Vaue) ($bil)
 2009,1,General Electric/通用电气公司,United States,Conglomerates,182.52,17.41,797.77,89.87
 2009,2,Royal Dutch Shell/英荷壳牌集团,Netherlands,Oil & Gas Operations,458.36,26.28,278.44,135.1
 2009,3,Toyota Motor/丰田汽车公司,Japan,Consumer Durables,263.42,17.21,324.98,102.35
